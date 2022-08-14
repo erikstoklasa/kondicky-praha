@@ -1,0 +1,130 @@
+{{ partial "header.html" . -}}
+<div class="main-contact limiter">
+    <p>Vladimír Svoboda</p>
+    <p class="telephone"><a href="tel:+420731739707">731 739 707</a></p>
+</div>
+<div class="limiter"><img class="main-image" src="/main.jpg" alt="Car with a person standing"></div>
+<div class="section">
+    <h2>Proč na kondiční jízdy?</h2>
+    <div class="text-center">
+        <p>Nebudete se bát <strong>vyjet do hustého provozu</strong></p>
+        <p>Začnete <strong>pořádně parkovat</strong></p>
+        <p>Dozvíte se <strong>nová silniční pravidla</strong></p>
+    </div>
+</div>
+<div class="section limiter" id="references">
+    <h2>Proč zrovna u nás?</h2>
+    <div class="reasons-list">
+        <p>Přizpůsobíme Vám jízdy přesně tomu, co potřebujete</p>
+        <p>Máme přes 11 let zkušeností s jízdami</p>
+        <p>Klidný a ochotný lektor</p>
+    </div>
+    <div class="reference-list">
+        <div class="reference-item">
+            <strong>Hana V.</strong>
+            <p>Pan Svoboda je zkušený a příjemný. Ideální, když se chcete pořádně rozjezdit.</p>
+        </div>
+        <div class="reference-item">
+            <strong>Petr J.</strong>
+            <p>Řidičák jsem měl už od osmnácti, ale dlouho jsem se bál vyjet do pražského provozu. Teď už jezdím bez
+                problémů. Díky!</p>
+        </div>
+        <img src="/references.png" alt="Reference 5 stars">
+    </div>
+</div>
+<div class="section limiter">
+    <h2>S čím budete řídit?</h2>
+    <figure>
+        <img src="/car.png" alt="Skoda superb 2020">
+        <figcaption>
+            Škoda Superb 2020 - manuál
+        </figcaption>
+    </figure>
+    <p>Jízdy můžete absolvovat po domluvě i ve vlastním autě.</p>
+</div>
+<div class="section limiter text-center" id="price">
+    <h2>Cena</h2>
+    <p>2 x 45 min 1200 Kč<br>
+        3 x 45 min 1700 Kč<br>
+        12 x 45 min 7000 Kč</p>
+</div>
+<div class="section limiter" id="how-it-works">
+    <h2>Jak to probíhá</h2>
+    <div class="primary-card">
+        <h3>1. Konzultace</h3>
+        <p>Řeknete nám, na co byste se chtěli zaměrit. Zkusíme si spíše parkování, jízdu v hustém provozu, nebo vše
+            najednou? Záleží jen na Vás.</p>
+    </div>
+    <div class="primary-card">
+        <h3>2. Vyzvednutí</h3>
+        <p>Vyzvedneme Vás na předem domluveném místě. Pokud byste chtěli, vyzvedneme Vás třeba i před domem.</p>
+    </div>
+    <div class="primary-card">
+        <h3>3. Jízdy</h3>
+        <p>Pojedeme spolu po Praze a vyzkoušíte si různé situace. Nebojte se, na nehody jsme samozřejmě pojištěni.</p>
+    </div>
+</div>
+<div class="section limiter">
+    <h2>Dárkové poukazy</h2>
+    <p>Můžete si objednat také dárkový poukaz. Pošleme Vám ho v elektronické podobě a s platností 9 měsíců. Objednejte
+        si ho pomocím formuláře níže, nebo na emailu. Ve formuláři stačí zaškrtnout, že chcete jízdy objednat jako
+        dárkový poukaz.</p>
+</div>
+<div class="section limiter text-center" id="contact">
+    <h2>Jak se objednat?</h2>
+    <p><strong>Vladimír Svoboda</strong></p>
+    <p class="telephone"><a href="tel:+420731739707">731 739 707</a></p>
+    <p class="email">svoboda@kondickypraha.cz</p>
+</div>
+<div class="section limiter">
+    <h2>Napište nám!</h2>
+    <form action="/">
+        <label for="name">Jméno a příjmení</label>
+        <input type="text" name="name" id="name">
+
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email">
+
+        <label for="phone">Telefon</label>
+        <input type="tel" name="phone" id="phone">
+
+        <label for="hours">Počet hodin</label>
+        <input type="number" name="hours" id="hours">
+
+        <label for="message">Zpráva</label>
+        <textarea type="text" name="message" id="message"></textarea>
+
+        <label for="voucher">Chci objednat jako dárkový poukaz</label>
+        <input type="checkbox" name="voucher" id="voucher">
+
+        <button type="submit">Odeslat objednávku</a>
+    </form>
+</div>
+<script>
+    //for disabled js
+    document.addEventListener("DOMContentLoaded", function () {
+        const menu = document.querySelector('#menu');
+        menu.classList.add('menu-closed');
+        setTimeout(function () {
+            menu.style.transitionProperty = 'all';
+            menu.style.transitionDuration = '0.3s';
+        }, 1);
+    });
+    document.querySelector('#menu-icon').addEventListener('click', function () {
+        const menu = document.querySelector('#menu');
+        const body = document.querySelector('body');
+        const menuIcon = document.querySelector('#menu-icon img');
+        menu.classList.toggle('menu-closed');
+        if (menu.classList.contains('menu-closed')) {
+            //state open -> closed
+            body.style.overflowY = 'auto';
+            menuIcon.setAttribute('src', '/icon-menu-white.svg');
+        } else {
+            //state closed -> open
+            body.style.overflowY = 'hidden';
+            menuIcon.setAttribute('src', '/icon-close.svg');
+        }
+    });
+</script>
+<article>
+    {{ partial "footer.html" . }}
