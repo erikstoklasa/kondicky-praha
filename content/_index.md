@@ -9,7 +9,11 @@ vouchers: Můžete si objednat také dárkový poukaz. Pošleme Vám ho v elektr
 price: |-
   2 x 45 min 1200 Kč
 
+
+
   3 x 45 min 1700 Kč
+
+
 
   12 x 45 min 7000 Kč
 blurb:
