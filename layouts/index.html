@@ -48,7 +48,9 @@
 </div>
 <div class="section limiter text-center" id="price">
     <h2>Cena</h2>
-    <p>{{ .Params.price }}</p>
+    <p>{{ .Params.price.line1 }}<br>
+        {{ .Params.price.line2 }}<br>
+        {{ .Params.price.line3 }}</p>
 </div>
 <div class="section limiter-lg" id="how-it-works">
     <h2>Jak to probíhá</h2>

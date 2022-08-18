@@ -28,7 +28,17 @@ collections:
           - { label: Telefon, name: phone, widget: string }
           - { label: Email, name: email, widget: string }
           - { label: "Dárkové poukazy", name: "vouchers", widget: "markdown" }
-          - { label: "Cena", name: "price", widget: "markdown" }
+          - {
+              label: "Cena",
+              name: "price",
+              widget: "object",
+              fields:
+                [
+                  { label: "1. řádek", name: "line1", widget: string },
+                  { label: "2. řádek", name: "line2", widget: string },
+                  { label: "3. řádek", name: "line3", widget: string },
+                ],
+            }
           - {
               label: "Blurb",
               name: blurb,
