@@ -1,7 +1,9 @@
 {{ partial "header.html" . -}}
 <div class="main-contact limiter">
     <p>Vladimír Svoboda</p>
-    <p class="telephone"><a href="tel:+420731739707">{{.Params.phone}}</a></p>
+
+    <p class="telephone"><a href="tel:{{ .Params.phone }}"> {{ .Params.phone }} </a>
+    </p>
 </div>
 <div class="limiter-xlg"><img class="main-image" src="/main.jpg" alt="Car with a person standing"></div>
 <div class="section">
@@ -71,15 +73,13 @@
 </div>
 <div class="section limiter">
     <h2>Dárkové poukazy</h2>
-    <p>Můžete si objednat také dárkový poukaz. Pošleme Vám ho v elektronické podobě a s platností 9 měsíců. Objednejte
-        si ho pomocím formuláře níže, nebo na emailu. Ve formuláři stačí zaškrtnout, že chcete jízdy objednat jako
-        dárkový poukaz.</p>
+    <p>{{ .Params.vouchers }}</p>
 </div>
 <div class="section limiter text-center" id="contact">
     <h2>Jak se objednat?</h2>
     <p><strong>Vladimír Svoboda</strong></p>
-    <p class="telephone"><a href="tel:+420731739707">731 739 707</a></p>
-    <p class="email">svoboda@kondickypraha.cz</p>
+    <p class="telephone"><a href="tel:{{ .Params.phone }}">{{ .Params.phone }}</a></p>
+    <p class="email">{{ .Params.email }}</p>
 </div>
 <div class="section limiter">
     <h2>Napište nám!</h2>
