@@ -29,6 +29,16 @@ price: |-
   2 x 45 min 1200 Kč\
   3 x 45 min 1700 Kč\
   12 x 45 min 7000 Kč
+howItWorks:
+  - stepName: 1. Konzultace
+    stepDescription: Řeknete nám, na co byste se chtěli zaměrit. Zkusíme si spíše
+      parkování, jízdu v hustém provozu, nebo vše najednou? Záleží jen na Vás.
+  - stepName: 2. Vyzvednutí
+    stepDescription: Vyzvedneme Vás na předem domluveném místě. Pokud byste chtěli,
+      vyzvedneme Vás třeba i před domem.
+  - stepName: 3. Jízdy
+    stepDescription: Pojedeme spolu po Praze a vyzkoušíte si různé situace. Nebojte
+      se, na nehody jsme samozřejmě pojištěni.
 vouchers: Můžete si objednat také dárkový poukaz. Pošleme Vám ho v elektronické
   podobě a s platností 9 měsíců. Objednejte si ho pomocím formuláře níže, nebo
   na emailu. Ve formuláři stačí zaškrtnout, že chcete jízdy objednat jako
