@@ -26,19 +26,14 @@ collections:
         editor:
           preview: false
         fields:
-          - { label: Title, name: title, widget: string }
           - { label: Telefon, name: phone, widget: string }
           - { label: Email, name: email, widget: string }
           - { label: IČO, name: businessId, widget: string }
-          - { label: "Dárkové poukazy", name: "vouchers", widget: "markdown" }
-          - { label: "Cena", name: "price", widget: "markdown" }
           - {
-              label: "Blurb",
-              name: blurb,
-              widget: object,
-              fields:
-                [
-                  { label: "Heading", name: "heading", widget: string },
-                  { label: "Text", name: "text", widget: "text" },
-                ],
+              label: "Proč na kondiční jízdy?",
+              name: "drivingSchoolBenefits",
+              widget: "markdown",
             }
+          - { label: "Proč zrovna u nás?", name: "reasons", widget: "markdown" }
+          - { label: "Cena", name: "price", widget: "markdown" }
+          - { label: "Dárkové poukazy", name: "vouchers", widget: "markdown" }

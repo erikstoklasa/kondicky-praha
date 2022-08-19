@@ -9,19 +9,13 @@
 <div class="section">
     <h2>Proč na kondiční jízdy?</h2>
     <div class="text-center">
-        <p>Nebudete se bát <strong>vyjet do hustého provozu</strong></p>
-        <p>Začnete <strong>pořádně parkovat</strong></p>
-        <p>Dozvíte se <strong>nová silniční pravidla</strong></p>
-        <p>Budete řídit <strong>bezpečněji</strong></p>
-        <p>Zvládnete s nadhledem i <strong>rychlé dálnice</strong></p>
+        {{ .Params.drivingSchoolBenefits | markdownify }}
     </div>
 </div>
 <div class="section" id="references">
     <h2 class="limiter">Proč zrovna u nás?</h2>
     <div class="reasons-list limiter">
-        <p>Přizpůsobíme Vám jízdy přesně tomu, co potřebujete</p>
-        <p>Máme přes 11 let zkušeností s jízdami</p>
-        <p>Klidný a ochotný lektor</p>
+        {{ .Params.reasons | markdownify }}
     </div>
     <div class="list limiter-lg">
         <div class="reference-item">
