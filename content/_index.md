@@ -1,5 +1,4 @@
 ---
-title: Titulek
 phone: 731 739 707
 email: svoboda@kondickypraha.cz
 businessId: "02623871"
@@ -11,7 +10,4 @@ price: |-
   2 x 45 min 1200 Kč\
   3 x 45 min 1700 Kč\
   12 x 45 min 7000 Kč
-blurb:
-  heading: Headin
-  text: Text
 ---
