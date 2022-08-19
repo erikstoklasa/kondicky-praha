@@ -48,9 +48,7 @@
 </div>
 <div class="section limiter text-center" id="price">
     <h2>Cena</h2>
-    <p>{{ .Params.price.line1 }}<br>
-        {{ .Params.price.line2 }}<br>
-        {{ .Params.price.line3 }}</p>
+    {{ .Params.price | markdownify }}
 </div>
 <div class="section limiter-lg" id="how-it-works">
     <h2>Jak to probíhá</h2>
@@ -73,7 +71,7 @@
 </div>
 <div class="section limiter">
     <h2>Dárkové poukazy</h2>
-    <p>{{ .Params.vouchers | markdownify }}</p>
+    {{ .Params.vouchers | markdownify }}
 </div>
 <div class="section limiter text-center" id="contact">
     <h2>Jak se objednat?</h2>
