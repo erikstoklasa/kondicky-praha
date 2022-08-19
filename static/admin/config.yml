@@ -29,11 +29,25 @@ collections:
           - { label: Telefon, name: phone, widget: string }
           - { label: Email, name: email, widget: string }
           - { label: IČO, name: businessId, widget: string }
-          - {
-              label: "Proč na kondiční jízdy?",
-              name: "drivingSchoolBenefits",
-              widget: "markdown",
-            }
+          - label: "Proč na kondiční jízdy?"
+            name: "drivingSchoolBenefits"
+            widget: "markdown"
           - { label: "Proč zrovna u nás?", name: "reasons", widget: "markdown" }
+          - label: Recenze
+            name: reviews
+            widget: list
+            fields:
+              - {
+                  label: "Jméno a iniciála příjmení",
+                  name: fullName,
+                  widget: string,
+                }
+              - { label: Text recenze, name: reviewBody, widget: string }
           - { label: "Cena", name: "price", widget: "markdown" }
+          - label: Jak to probíhá?
+            name: howItWorks
+            widget: list
+            fields:
+              - { label: Název kroku, name: stepName, widget: string }
+              - { label: Popis kroku, name: stepDescription, widget: string }
           - { label: "Dárkové poukazy", name: "vouchers", widget: "markdown" }

@@ -18,15 +18,12 @@
         {{ .Params.reasons | markdownify }}
     </div>
     <div class="list limiter-lg">
+        {{ range .Params.reviews }}
         <div class="reference-item">
-            <strong>Hana V.</strong>
-            <p>Pan Svoboda je zkušený a příjemný. Ideální, když se chcete pořádně rozjezdit.</p>
+            <strong>{{ .fullName }}</strong>
+            <p>{{ .reviewBody }}</p>
         </div>
-        <div class="reference-item">
-            <strong>Petr J.</strong>
-            <p>Řidičák jsem měl už od osmnácti, ale dlouho jsem se bál vyjet do pražského provozu. Teď už jezdím bez
-                problémů. Díky!</p>
-        </div>
+        {{ end }}
     </div>
     <img src="/references.png" alt="Reference 5 stars">
 </div>
@@ -44,23 +41,15 @@
     <h2>Cena</h2>
     {{ .Params.price | markdownify }}
 </div>
-<div class="section limiter-lg" id="how-it-works">
-    <h2>Jak to probíhá</h2>
+<div class="section limiter-xlg" id="how-it-works">
+    <h2>Jak to probíhá?</h2>
     <div class="list">
+        {{ range .Params.howItWorks }}
         <div class="primary-card">
-            <h3>1. Konzultace</h3>
-            <p>Řeknete nám, na co byste se chtěli zaměrit. Zkusíme si spíše parkování, jízdu v hustém provozu, nebo vše
-                najednou? Záleží jen na Vás.</p>
+            <h3>{{.stepName}}</h3>
+            <p>{{.stepDescription}}</p>
         </div>
-        <div class="primary-card">
-            <h3>2. Vyzvednutí</h3>
-            <p>Vyzvedneme Vás na předem domluveném místě. Pokud byste chtěli, vyzvedneme Vás třeba i před domem.</p>
-        </div>
-        <div class="primary-card">
-            <h3>3. Jízdy</h3>
-            <p>Pojedeme spolu po Praze a vyzkoušíte si různé situace. Nebojte se, na nehody jsme samozřejmě pojištěni.
-            </p>
-        </div>
+        {{ end }}
     </div>
 </div>
 <div class="section limiter">
