@@ -18,6 +18,9 @@ reasons: |-
   Máme přes 11 let zkušeností s jízdami
 
   Klidný a ochotný lektor
+reviews:
+  - fullName: Jakub S.
+    reviewBody: Byl spokojen
 price: |-
   2 x 45 min 1200 Kč\
   3 x 45 min 1700 Kč\
