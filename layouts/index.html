@@ -73,7 +73,7 @@
 </div>
 <div class="section limiter">
     <h2>Dárkové poukazy</h2>
-    <p>{{ .Params.vouchers }}</p>
+    <p>{{ .Params.vouchers | markdownify }}</p>
 </div>
 <div class="section limiter text-center" id="contact">
     <h2>Jak se objednat?</h2>
