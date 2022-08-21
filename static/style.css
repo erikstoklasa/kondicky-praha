@@ -202,6 +202,9 @@ footer .email:before {
 footer .telephone:before {
   content: url("/icon-phone-white.svg");
 }
+footer span {
+  color: #505050;
+}
 @media (min-width: 768px) {
   .list {
     flex-direction: row;

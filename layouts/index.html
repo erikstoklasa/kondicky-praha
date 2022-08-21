@@ -64,7 +64,7 @@
 </div>
 <div class="section limiter">
     <h2>Napište nám!</h2>
-    <form action="/">
+    <form action="https://kondickyprahacontact.devsto.workers.dev/" method="post">
         <label for="name">Jméno a příjmení</label>
         <input type="text" name="name" id="name">
 
@@ -96,7 +96,11 @@
             menu.style.transitionDuration = '0.3s';
         }, 1);
     });
-    document.querySelector('#menu-icon').addEventListener('click', function () {
+    document.querySelector('#menu-icon').addEventListener('click', toggleMenuState);
+    document.querySelectorAll('#menu a').forEach(el => {
+        el.addEventListener('click', toggleMenuState);
+    });
+    function toggleMenuState() {
         const menu = document.querySelector('#menu');
         const body = document.querySelector('body');
         const menuIcon = document.querySelector('#menu-icon img');
@@ -110,7 +114,7 @@
             body.style.overflowY = 'hidden';
             menuIcon.setAttribute('src', '/icon-close.svg');
         }
-    });
+    }
 </script>
 <article>
     {{ partial "footer.html" . }}
