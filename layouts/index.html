@@ -60,7 +60,8 @@
     <h2>Jak se objednat?</h2>
     <p><strong>Vladimír Svoboda</strong></p>
     <p class="telephone"><a href="tel:{{ .Params.phone }}">{{ .Params.phone }}</a></p>
-    <p class="email">{{ .Params.email }}</p>
+    <p class="email"><a href="mailto:{{ .Params.email }}">{{ .Params.email }}</a></p>
+    <a href="fb"><img src="/icon-facebook.svg" alt="Facebook icon" /></a>
 </div>
 <div class="section limiter">
     <h2>Napište nám!</h2>
@@ -95,11 +96,15 @@
             menu.style.transitionProperty = 'all';
             menu.style.transitionDuration = '0.3s';
         }, 1);
+        console.log(window.innerWidth);
+        if (window.outerWidth < 768) {
+            document.querySelectorAll('#menu a').forEach(el => {
+                el.addEventListener('click', toggleMenuState);
+            });
+        }
     });
     document.querySelector('#menu-icon').addEventListener('click', toggleMenuState);
-    document.querySelectorAll('#menu a').forEach(el => {
-        el.addEventListener('click', toggleMenuState);
-    });
+
     function toggleMenuState() {
         const menu = document.querySelector('#menu');
         const body = document.querySelector('body');
