@@ -21,7 +21,7 @@ reasons: |-
 reviews:
   - fullName: Hana V.
     reviewBody: Pan Svoboda je zkušený a příjemný. Ideální, když se chcete pořádně
-      rozjezdit.
+      rozjezdit. Přidáno, úprava.
   - fullName: Petr J.
     reviewBody: Řidičák jsem měl už od osmnácti, ale dlouho jsem se bál vyjet do
       pražského provozu. Teď už jezdím bez problémů. Díky!
