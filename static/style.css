@@ -205,6 +205,18 @@ footer .telephone:before {
 footer span {
   color: #505050;
 }
+.form-alert {
+  padding: 1rem;
+  border-radius: 5px;
+  color: white;
+  display: none;
+}
+.form-alert-success {
+  background: green;
+}
+.form-alert-error {
+  background: red;
+}
 @media (min-width: 768px) {
   .list {
     flex-direction: row;

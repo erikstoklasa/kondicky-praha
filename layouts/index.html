@@ -86,6 +86,9 @@
 
         <button type="submit">Odeslat objednávku</a>
     </form>
+    <div class="form-alert-success form-alert">Úspěšně jsme přijali Vaši zprávu. Děkujeme.</div>
+    <div class="form-alert-error form-alert">Nepodařilo se zprávu odeslat, pošlete nám prosím email, nebo nám zavolejte.
+    </div>
 </div>
 <script>
     //for disabled js
@@ -96,7 +99,6 @@
             menu.style.transitionProperty = 'all';
             menu.style.transitionDuration = '0.3s';
         }, 1);
-        console.log(window.innerWidth);
         if (window.outerWidth < 768) {
             document.querySelectorAll('#menu a').forEach(el => {
                 el.addEventListener('click', toggleMenuState);
@@ -119,6 +121,41 @@
             body.style.overflowY = 'hidden';
             menuIcon.setAttribute('src', '/icon-close.svg');
         }
+    }
+    document.querySelector('form').addEventListener('submit', submitForm);
+    async function submitForm(e) {
+        e.preventDefault();
+
+        document.querySelector('.form-alert-error').style.display = 'none'
+        document.querySelector('.form-alert-success').style.display = 'none'
+
+        const name = document.querySelector('#name').value;
+        const email = document.querySelector('#email').value;
+        const phone = document.querySelector('#phone').value;
+        const hours = document.querySelector('#hours').value;
+        const message = document.querySelector('#message').value;
+        const voucher = document.querySelector('#voucher').value;
+
+        const body = {
+            'name': name,
+            'email': email,
+            'phone': phone,
+            'hours': hours,
+            'message': message,
+            'voucher': voucher,
+        }
+
+        const res = await fetch("https://kondickyprahacontact.devsto.workers.dev/", {
+            method: "POST",
+            body: JSON.stringify(body),
+            headers: {
+                "Content-Type": "application/json"
+            }
+        });
+
+        res.status == 202
+            ? document.querySelector('.form-alert-success').style.display = 'block'
+            : document.querySelector('.form-alert-error').style.display = 'block';
     }
 </script>
 <article>
