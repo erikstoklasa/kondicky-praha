@@ -136,7 +136,7 @@
         const phone = document.querySelector('#phone').value;
         const hours = document.querySelector('#hours').value;
         const message = document.querySelector('#message').value;
-        const voucher = document.querySelector('#voucher').value;
+        const voucher = document.querySelector('#voucher').checked;
 
         const body = {
             'name': name,
@@ -146,7 +146,6 @@
             'message': message,
             'voucher': voucher,
         }
-
         const res = await fetch("https://kondickyprahacontact.devsto.workers.dev/", {
             method: "POST",
             body: JSON.stringify(body),
