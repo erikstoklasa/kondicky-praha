@@ -210,12 +210,13 @@ footer span {
   border-radius: 5px;
   color: white;
   display: none;
+  margin-top: 2rem;
 }
 .form-alert-success {
-  background: green;
+  background: #28a745;
 }
 .form-alert-error {
-  background: red;
+  background: #dc3545;
 }
 @media (min-width: 768px) {
   .list {

@@ -67,16 +67,16 @@
     <h2>Napište nám!</h2>
     <form action="https://kondickyprahacontact.devsto.workers.dev/" method="post">
         <label for="name">Jméno a příjmení</label>
-        <input type="text" name="name" id="name">
+        <input type="text" name="name" id="name" required>
 
         <label for="email">Email</label>
-        <input type="email" name="email" id="email">
+        <input type="email" name="email" id="email" required>
 
         <label for="phone">Telefon</label>
-        <input type="tel" name="phone" id="phone">
+        <input type="tel" name="phone" id="phone" required>
 
         <label for="hours">Počet hodin</label>
-        <input type="number" name="hours" id="hours">
+        <input type="number" name="hours" id="hours" required>
 
         <label for="message">Zpráva</label>
         <textarea type="text" name="message" id="message"></textarea>
@@ -84,10 +84,13 @@
         <label for="voucher">Chci objednat jako dárkový poukaz</label>
         <input type="checkbox" name="voucher" id="voucher">
 
-        <button type="submit">Odeslat objednávku</a>
+        <button type="submit">Odeslat objednávku</button>
     </form>
-    <div class="form-alert-success form-alert">Úspěšně jsme přijali Vaši zprávu. Děkujeme.</div>
-    <div class="form-alert-error form-alert">Nepodařilo se zprávu odeslat, pošlete nám prosím email, nebo nám zavolejte.
+    <div class="form-alert-success form-alert">
+        <p>Úspěšně jsme přijali Vaši zprávu. Děkujeme.</p>
+    </div>
+    <div class="form-alert-error form-alert">
+        <p>Nepodařilo se zprávu odeslat, pošlete nám prosím email, nebo nám zavolejte.</p>
     </div>
 </div>
 <script>
@@ -122,8 +125,7 @@
             menuIcon.setAttribute('src', '/icon-close.svg');
         }
     }
-    document.querySelector('form').addEventListener('submit', submitForm);
-    function submitForm(e) {
+    document.querySelector('form').addEventListener('submit', async (e) => {
         e.preventDefault();
 
         document.querySelector('.form-alert-error').style.display = 'none'
@@ -156,7 +158,7 @@
         res.status == 202
             ? document.querySelector('.form-alert-success').style.display = 'block'
             : document.querySelector('.form-alert-error').style.display = 'block';
-    }
+    });
 </script>
 <article>
     {{ partial "footer.html" . }}
