@@ -2,7 +2,7 @@
 <div class="main-contact limiter">
     <p>Vladimír Svoboda</p>
 
-    <p class="telephone"><a href="tel:{{ .Params.phone }}"> {{ .Params.phone }} </a>
+    <p class="telephone"><a href="tel:{{ .Params.phone }}"><span itemprop="telephone">{{ .Params.phone }}</span></a>
     </p>
 </div>
 <div class="limiter-xlg"><img class="main-image" src="/main.jpg" alt="Car with a person standing"></div>
@@ -19,9 +19,10 @@
     </div>
     <div class="list limiter-lg">
         {{ range .Params.reviews }}
-        <div class="reference-item">
-            <strong>{{ .fullName }}</strong>
-            <p>{{ .reviewBody }}</p>
+        <div class="reference-item" itemprop="review" itemscope itemtype="http://schema.org/Review">
+            <span itemprop="author" itemscope itemtype="http://schema.org/Person"><strong itemprop="name">{{ .fullName
+                    }}</strong></span>
+            <p itemprop="reviewBody">{{ .reviewBody }}</p>
         </div>
         {{ end }}
     </div>
@@ -59,9 +60,15 @@
 <div class="section limiter text-center" id="contact">
     <h2>Jak se objednat?</h2>
     <p><strong>Vladimír Svoboda</strong></p>
-    <p class="telephone"><a href="tel:{{ .Params.phone }}">{{ .Params.phone }}</a></p>
-    <p class="email"><a href="mailto:{{ .Params.email }}">{{ .Params.email }}</a></p>
-    <a href="https://www.facebook.com/KondickyPraha"><img src="/icon-facebook.svg" alt="Facebook icon" /></a>
+    <a href="tel:{{ .Params.phone }}">
+        <p class="telephone"><span itemprop="telephone">{{ .Params.phone }}</span></p>
+    </a>
+    <a href="mailto:{{ .Params.email }}">
+        <p class="email"><span itemprop="email">{{ .Params.email }}</span></p>
+    </a>
+    <a href="https://www.facebook.com/KondickyPraha">
+        <p class="facebook">@KondickyPraha</p>
+    </a>
 </div>
 <div class="section limiter">
     <h2>Napište nám!</h2>

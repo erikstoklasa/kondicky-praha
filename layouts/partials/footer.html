@@ -1,17 +1,22 @@
-</article>
-</main>
 <footer>
 	<div class="limiter">
 		<p><strong>Vladimír Svoboda</strong></p>
 		<p>IČO: {{ .Params.businessId }}</p>
-		<p class="telephone"><a href="tel:{{ .Params.phone }}">{{ .Params.phone }}</a></p>
-		<p class="email"><a href="mailto:{{ .Params.email }}">{{ .Params.email }}</a></p>
-		<a href="https://www.facebook.com/KondickyPraha"><img src="/icon-facebook-white.svg" alt="Facebook icon" /></a>
+		<a href="tel:{{ .Params.phone }}">
+			<p class="telephone">{{ .Params.phone }}</p>
+		</a>
+		<a href="mailto:{{ .Params.email }}">
+			<p class="email">{{ .Params.email }}</p>
+		</a>
+		<a href="https://www.facebook.com/KondickyPraha">
+			<p class="facebook">@KondickyPraha</p>
+		</a>
 	</div>
 	<div class="limiter">
-		<span>Made with Hugo & Netlify CMS by Erik Stoklasa</span>
+		<span class="credits">Made with Hugo & Netlify CMS by Erik Stoklasa</span>
 	</div>
 </footer>
+</span>
 </body>
 
 </html>

@@ -125,20 +125,24 @@ main {
 img {
   max-width: 100%;
 }
-.telephone:before {
-  content: url("/icon-phone.svg");
+.telephone:before,
+.email:before,
+.facebook:before {
   display: inline-block;
   height: 25px;
   width: 25px;
   vertical-align: middle;
+}
+.telephone:before {
+  content: url("/icon-phone.svg");
   padding-right: 5px;
 }
 .email:before {
   content: url("/icon-email.svg");
-  display: inline-block;
-  height: 25px;
-  width: 25px;
-  vertical-align: middle;
+  padding-right: 10px;
+}
+.facebook:before {
+  content: url("/icon-facebook.svg");
   padding-right: 10px;
 }
 h2 {
@@ -202,7 +206,10 @@ footer .email:before {
 footer .telephone:before {
   content: url("/icon-phone-white.svg");
 }
-footer span {
+footer .facebook:before {
+  content: url("/icon-facebook-white.svg");
+}
+footer .credits {
   color: #505050;
 }
 .form-alert {
