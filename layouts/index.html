@@ -20,11 +20,16 @@
     <div class="list limiter-lg">
         {{ range .Params.reviews }}
         <div class="reference-item" itemprop="review" itemscope itemtype="http://schema.org/Review">
-            <span itemprop="author" itemscope itemtype="http://schema.org/Person"><strong itemprop="name">{{ .fullName
-                    }}</strong></span>
+            <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <strong itemprop="name">{{ .fullName }}</strong>
+            </span>
             <p itemprop="reviewBody">{{ .reviewBody }}</p>
         </div>
         {{ end }}
+        <div itemprop="aggregateRating" itemtype="https://schema.org/AggregateRating" itemscope>
+            <meta itemprop="reviewCount" content="{{ len .Params.reviews }}" />
+            <meta itemprop="ratingValue" content="4.8" />
+        </div>
     </div>
     <img src="/references.png" alt="Reference 5 stars">
 </div>
