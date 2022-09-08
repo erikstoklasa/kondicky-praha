@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.Language }}">
+<html lang="{{ .Site.LanguageCode }}">
 
 <head>
   <title>
@@ -11,7 +11,7 @@
   {{ with .Site.Params.favicon }}
   <link rel="icon" href="{{ . }}" />
   {{ end -}}
-  <meta name="description" content="{{ with .Params.description }}{{ . }}{{ else }}{{ .Summary }}{{ end }}" />
+  <meta name="description" content="{{ .Site.Params.Description }}" />
   {{ if isset .Params "tags" }}
   <meta name="keywords" content="{{ with
     .Params.tags }}{{ delimit . " , " }}{{ end }}"> {{ end -}}
