@@ -1,0 +1,12 @@
+{{$alt := .alt}}
+{{$size := .size}}
+{{ with resources.GetMatch .path }}
+<picture>
+    {{ with .Resize (print $size " webp")}}
+    <source srcset='{{ .RelPermalink }}' width="{{ .Width }}" height="{{ .Height }}" type="image/webp">
+    {{ end }}
+    {{ with .Resize (print $size " jpeg")}}
+    <img src='{{ .RelPermalink }}' width="{{ .Width }}" height="{{ .Height }}" alt="{{ $alt }}">
+    {{ end }}
+</picture>
+{{ end }}
