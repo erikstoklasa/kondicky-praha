@@ -30,7 +30,7 @@ price: |-
   3 x 45 min 1700 Kč\
   12 x 45 min 7000 Kč
 
-  Nyní vánoční sleva 500 Kč za 45 min
+  **Nyní vánoční sleva 500 Kč za 45 min**
 howItWorks:
   - stepName: 1. Konzultace
     stepDescription: Řeknete nám, na co byste se chtěli zaměrit. Zkusíme si spíše
