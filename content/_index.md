@@ -19,12 +19,12 @@ reasons: |-
 
   Klidný a ochotný lektor
 reviews:
-  - fullName: Petr J.
-    reviewBody: Řidičák jsem měl už od osmnácti, ale dlouho jsem se bál vyjet do
-      pražského provozu. Teď už jezdím bez problémů. Díky!
   - fullName: Hana V.
     reviewBody: Pan Svoboda je zkušený a příjemný. Ideální, když se chcete pořádně
       rozjezdit.
+  - fullName: Petr J.
+    reviewBody: Řidičák jsem měl už od osmnácti, ale dlouho jsem se bál vyjet do
+      pražského provozu. Teď už jezdím bez problémů. Díky!
 price: |-
   2 x 45 min 1200 Kč\
   3 x 45 min 1700 Kč\
